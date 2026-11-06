@@ -10,6 +10,7 @@ Until `mattleads/agent-publishing-bundle` 0.1.0 is on Packagist, `composer.json`
 
 ```bash
 composer install
+echo "APP_SECRET=$(openssl rand -hex 16)" > .env.local   # API keys are hashed with it; the bundle refuses an empty secret
 php bin/console doctrine:schema:create
 php bin/console agent-publishing:api-key:create seo-agent --scope=articles:read --scope=articles:draft --section=blog
 php bin/console agent-publishing:api-key:create editor --scope=articles:read --scope=articles:approve --scope=articles:publish --scope=stats:read
