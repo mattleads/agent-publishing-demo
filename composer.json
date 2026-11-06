@@ -1,7 +1,7 @@
 {
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": ">=8.4",
@@ -10,7 +10,7 @@
         "doctrine/doctrine-bundle": "^3.3",
         "doctrine/orm": "^3.7",
         "league/commonmark": "^2.10",
-        "mattleads/agent-publishing-bundle": "@dev",
+        "mattleads/agent-publishing-bundle": "^0.1.1",
         "symfony/console": "8.1.*",
         "symfony/dotenv": "8.1.*",
         "symfony/flex": "^2",
@@ -73,13 +73,5 @@
             "allow-contrib": "true",
             "require": "8.1.*"
         }
-    },
-    "repositories": [{
-        "name": "bundle",
-        "type": "path",
-        "url": "../../bundles/agent-publishing-bundle",
-        "options": {
-            "symlink": true
-        }
-    }]
+    }
 }

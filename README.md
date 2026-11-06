@@ -6,8 +6,6 @@ The demo app owns only what a site always owns: a controller that renders articl
 
 ## Run it
 
-Until `mattleads/agent-publishing-bundle` 0.1.0 is on Packagist, `composer.json` points at a path repository: clone the bundle next to this project as `../../bundles/agent-publishing-bundle`, or replace the repository entry with the Packagist version.
-
 ```bash
 composer install
 echo "APP_SECRET=$(openssl rand -hex 16)" > .env.local   # API keys are hashed with it; the bundle refuses an empty secret

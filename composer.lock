@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18164c51871c885669ccc4ce947bffd4",
+    "content-hash": "c0ba7e1dd5f44161fda73cc77a0a71d3",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -1195,11 +1195,17 @@
         },
         {
             "name": "mattleads/agent-publishing-bundle",
-            "version": "dev-main",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mattleads/agent-publishing-bundle.git",
+                "reference": "47adfa2e5c7f592ababa56842c0acb94d977642e"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../bundles/agent-publishing-bundle",
-                "reference": "90a7642cd986d8639f8c953fa9dca78394dbce63"
+                "type": "zip",
+                "url": "https://api.github.com/repos/mattleads/agent-publishing-bundle/zipball/47adfa2e5c7f592ababa56842c0acb94d977642e",
+                "reference": "47adfa2e5c7f592ababa56842c0acb94d977642e",
+                "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
@@ -1244,30 +1250,7 @@
                     "MattLeads\\AgentPublishingBundle\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "MattLeads\\AgentPublishingBundle\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ],
-                "stan": [
-                    "phpstan analyse"
-                ],
-                "cs": [
-                    "php-cs-fixer fix --dry-run --diff"
-                ],
-                "cs:fix": [
-                    "php-cs-fixer fix"
-                ],
-                "check": [
-                    "@cs",
-                    "@stan",
-                    "@test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1297,10 +1280,7 @@
                 "issues": "https://github.com/mattleads/agent-publishing-bundle/issues",
                 "source": "https://github.com/mattleads/agent-publishing-bundle"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2026-11-06T09:50:59+00:00"
         },
         {
             "name": "nette/schema",
@@ -5632,10 +5612,8 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "mattleads/agent-publishing-bundle": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
