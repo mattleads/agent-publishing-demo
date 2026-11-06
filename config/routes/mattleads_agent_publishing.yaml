@@ -1,0 +1,2 @@
+mattleads_agent_publishing:
+    resource: '@MattLeadsAgentPublishingBundle/config/routes.php'

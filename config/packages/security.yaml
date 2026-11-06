@@ -1,0 +1,21 @@
+security:
+    providers:
+        none:
+            memory: ~
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        agent_publishing:
+            pattern: ^/api/publisher
+            stateless: true
+            provider: none
+            entry_point: MattLeads\AgentPublishingBundle\Security\ApiKeyAuthenticator
+            custom_authenticators:
+                - MattLeads\AgentPublishingBundle\Security\ApiKeyAuthenticator
+        main:
+            lazy: true
+            provider: none
+    access_control:
+        - { path: ^/api/publisher/v1/openapi\.json$, roles: PUBLIC_ACCESS }
+        - { path: ^/api/publisher, roles: ROLE_AGENT_PUBLISHING }

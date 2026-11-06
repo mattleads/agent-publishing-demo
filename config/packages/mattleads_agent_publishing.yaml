@@ -1,0 +1,22 @@
+mattleads_agent_publishing:
+    storage: doctrine
+    locales: [en, de]
+    default_locale: en
+    sections:
+        blog:
+            path: /blog
+        docs:
+            path: /docs
+            locales: [en]
+            lint: { require_faq: true, min_words: 200, min_internal_links: 0 }
+    api:
+        prefix: /api/publisher/v1
+    analytics:
+        timezone: Europe/London
+    seo:
+        url_pattern: '{base}{locale_prefix}{section_path}/{slug}'
+        site_name: Agent Publishing Demo
+        site_description: A Symfony 8.1 site whose articles are drafted by agents, approved by humans and measured by the bundle.
+        publisher: { name: Demo Publishing Ltd, url: https://example.com }
+        author: { name: Demo Editor }
+        jsonld_type: TechArticle

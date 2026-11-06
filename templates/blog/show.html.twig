@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block head %}
+    {% if article.summary %}<meta name="description" content="{{ article.summary }}">{% endif %}
+    <link rel="canonical" href="{{ agent_publishing_url(article) }}">
+    {{ agent_publishing_jsonld(article) }}
+{% endblock %}
+{% block body %}
+    <article>
+        <h1>{{ article.title }}</h1>
+        <p class="meta">{{ article.section }} · {{ article.locale }} · published {{ article.publishedAt|date('Y-m-d H:i') }}{% if article.tags %} · {{ article.tags|join(', ') }}{% endif %}</p>
+        {% if article.summary %}<p><strong>{{ article.summary }}</strong></p>{% endif %}
+        {{ html|raw }}
+    </article>
+{% endblock %}

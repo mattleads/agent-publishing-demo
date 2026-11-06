@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Agent Publishing Demo</h1>
+    <p>Articles below were created through the API. Publish one with the agent script and it appears here.</p>
+    {% for section, articles in bySection %}
+        <h2>{{ section|capitalize }}</h2>
+        {% if articles is empty %}<p class="meta">Nothing published yet.</p>{% endif %}
+        <ul>
+        {% for a in articles %}
+            <li><a href="{{ agent_publishing_url(a) }}">{{ a.title }}</a> <span class="meta">({{ a.locale }}, {{ a.publishedAt|date('Y-m-d') }})</span></li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}

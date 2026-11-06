@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Agent Publishing Demo{% endblock %}</title>
+    {% block head %}{% endblock %}
+    <style>
+        body { font: 16px/1.5 system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+        nav a { margin-right: 1rem; }
+        article h1 { margin-bottom: .25rem; }
+        .meta { color: #666; font-size: .9rem; }
+        pre { background: #f4f4f4; padding: 1rem; overflow-x: auto; }
+    </style>
+</head>
+<body>
+<nav><a href="{{ path('home') }}">Home</a> <a href="/sitemap-publisher.xml">Sitemap</a> <a href="/llms.txt">llms.txt</a> <a href="/api/publisher/v1/openapi.json">OpenAPI</a></nav>
+{% block body %}{% endblock %}
+</body>
+</html>
