@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0ba7e1dd5f44161fda73cc77a0a71d3",
+    "content-hash": "11390acf17e8ab7de6b9daaaf158a74c",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -1195,16 +1195,16 @@
         },
         {
             "name": "mattleads/agent-publishing-bundle",
-            "version": "v0.1.1",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mattleads/agent-publishing-bundle.git",
-                "reference": "47adfa2e5c7f592ababa56842c0acb94d977642e"
+                "reference": "f62e8a2db19cce36a17de781fe997a65dba331d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mattleads/agent-publishing-bundle/zipball/47adfa2e5c7f592ababa56842c0acb94d977642e",
-                "reference": "47adfa2e5c7f592ababa56842c0acb94d977642e",
+                "url": "https://api.github.com/repos/mattleads/agent-publishing-bundle/zipball/f62e8a2db19cce36a17de781fe997a65dba331d7",
+                "reference": "f62e8a2db19cce36a17de781fe997a65dba331d7",
                 "shasum": ""
             },
             "require": {
@@ -1280,7 +1280,7 @@
                 "issues": "https://github.com/mattleads/agent-publishing-bundle/issues",
                 "source": "https://github.com/mattleads/agent-publishing-bundle"
             },
-            "time": "2026-11-06T09:50:59+00:00"
+            "time": "2026-11-06T10:24:37+00:00"
         },
         {
             "name": "nette/schema",

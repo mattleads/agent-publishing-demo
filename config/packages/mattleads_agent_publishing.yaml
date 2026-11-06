@@ -13,6 +13,16 @@ mattleads_agent_publishing:
         prefix: /api/publisher/v1
     analytics:
         timezone: Europe/London
+    mcp:
+        enabled: true
+        instructions: >
+            This is the Agent Publishing Demo, a Symfony site. Call list_sections and get_style_guide first.
+            Draft into the "blog" section, lint with lint_draft until the status is "pass", then create_draft
+            and submit_article. A human approves. Do not try to publish directly.
+        style_guide: |
+            Voice: a senior engineer briefing a peer. Lead with the answer in the first paragraph.
+            Name exact versions, packages and classes. Use H2 for sections, no H1 in the body.
+            Avoid: "game-changer", "in today's fast-paced world", emoji, and link text like "click here".
     seo:
         url_pattern: '{base}{locale_prefix}{section_path}/{slug}'
         site_name: Agent Publishing Demo

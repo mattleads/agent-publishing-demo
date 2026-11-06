@@ -1218,6 +1218,13 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     }>,
  *     api?: array{
  *         prefix?: scalar|Param|null, // Default: "/api/publisher/v1"
+ *         key_management?: bool|Param, // Expose /keys endpoints so holders of "keys:manage" can issue and revoke keys over the API. When false, only the agent-publishing:api-key:create command issues keys. // Default: true
+ *     },
+ *     mcp?: array{ // Model Context Protocol endpoint (tools only, JSON-RPC over HTTP) so agents call the same operations as the REST API with the same keys.
+ *         enabled?: bool|Param, // Default: true
+ *         path?: scalar|Param|null, // Appended to api.prefix. // Default: "/mcp"
+ *         instructions?: scalar|Param|null, // Shown to the agent at initialize: what this site is, how to work on it. // Default: null
+ *         style_guide?: scalar|Param|null, // Returned by the get_style_guide tool: voice, structure, what to avoid. // Default: null
  *     },
  *     analytics?: array{ // Counts views per article and per referrer. No cookies, no IP addresses.
  *         enabled?: bool|Param, // Default: true

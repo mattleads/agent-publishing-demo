@@ -35,6 +35,16 @@ The script walks through the whole loop and prints what happens at each step: th
 
 Public outputs: `/sitemap-publisher.xml`, `/llms.txt`, `/api/publisher/v1/openapi.json`.
 
+## Use it from an MCP client
+
+The same operations are available as tools at `/api/publisher/v1/mcp`. With the demo running and an agent key:
+
+```bash
+claude mcp add --transport http publisher http://localhost:8766/api/publisher/v1/mcp --header "Authorization: Bearer apb_AGENT_SECRET"
+```
+
+Or by hand, which is what `scripts/mcp.sh` does: an `initialize` handshake, `tools/list`, and a `tools/call` of `lint_draft`.
+
 ## Notes
 
 - Storage is the bundle's Doctrine mapping on SQLite. Switch `DATABASE_URL` in `.env.local` for anything else.
