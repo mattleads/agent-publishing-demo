@@ -12,3 +12,4 @@
 ###> demo ###
 /var/data.db
 ###< demo ###
+/.idea/
